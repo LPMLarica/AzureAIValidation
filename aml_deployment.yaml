@@ -1,0 +1,10 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: saifr-retail-deploy
+endpoint_name: saifr-retail-endpoint
+model: azureml://registries/azureml-saifr/models/Saifr-Retail-Marketing-Compliance/versions/1
+instance_type: Standard_DS3_v2
+scale_settings:
+  scale_to_zero_enabled: true
+  max_replicas: 1
+  min_replicas: 0
+traffic_percent: 100

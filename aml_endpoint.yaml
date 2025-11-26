@@ -1,0 +1,4 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineEndpoint.schema.json
+name: saifr-retail-endpoint
+auth_mode: key
+location: brazilsouth
