@@ -2,70 +2,44 @@
 
 Modern, Fully Asynchronous Document Processing with Azure — Upload → Queue → Function → AI → Result
 <p align="center"> <img src="https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white"/> <img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/> <img src="https://img.shields.io/badge/Azure%20Functions-Serverless-0062AD?style=for-the-badge&logo=azurefunctions&logoColor=white"/> <img src="https://img.shields.io/badge/Async-Pipeline-6C63FF?style=for-the-badge"/> </p>
-✨ Overview
 
-This repository contains a fully functional, production-ready asynchronous pipeline for processing documents using:
-
-Azure Document Intelligence (OCR + extraction)
-
-Azure Functions (serverless queue consumers)
-
-Azure Storage Queues
-
-Streamlit for a modern async UI
-
-Auto-tuning of thresholds
-
-Full local + cloud versions of the pipeline
+## ✨ Overview: 
+- This repository contains a fully functional, production-ready asynchronous pipeline for processing documents using:
+- Azure Document Intelligence (OCR + extraction)
+- Azure Functions (serverless queue consumers)
+- Azure Storage Queues
+- Streamlit for a modern async UI
+- Auto-tuning of thresholds
+- Full local + cloud versions of the pipeline
 
 🎯 Upload a file → it enters the queue → serverless processor extracts insights → result appears automatically.
 
-🚀 Features
+## 🚀 Features: 
+
 💠 End-to-End Async Processing
-
-Modern queue-based architecture
-
-High-scale, serverless, low-latency
-
-📄 Document Intelligence Integration
-
-OCR
-
-Layout extraction
-
-Key-value prediction
-
-Custom schema mapping
-
-🕸️ Streamlit Modern UI
-
-Drag-and-drop uploader
-
-Live task polling
-
-Real-time status indicators
-
-Colorful and clean interface
-
+💠 Modern queue-based architecture
+💠 High-scale, serverless, low-latency
+💠 Document Intelligence Integration
+💠 OCR
+💠 Layout extraction
+💠 Key-value prediction
+💠 Custom schema mapping
+💠 Streamlit Modern UI
+💠 Drag-and-drop uploader
+💠 Live task polling
+💠 Real-time status indicators
+💠 Colorful and clean interface
 🔁 Automatic Threshold Tuning
+💠 Runs metrics over past extractions
+💠 Suggests new thresholds automatically
+💠 Optional automated “smart tuning” mode
+💠 Azure Function Processor
+💠 Stateless
+💠 Idempotent
+💠 Production-ready
+💠 Includes retry/backoff handling
 
-Runs metrics over past extractions
-
-Suggests new thresholds automatically
-
-Optional automated “smart tuning” mode
-
-⚙ Azure Function Processor
-
-Stateless
-
-Idempotent
-
-Production-ready
-
-Includes retry/backoff handling
-
-🧩 Architecture Diagram
+## 🧩 Architecture Diagram: 
 ```
 flowchart LR
     A[Streamlit App<br>Upload File] --> B[Blob Storage]
@@ -76,7 +50,7 @@ flowchart LR
     F --> G[Final Result Stored]
     G --> H[Streamlit Polls<br>and Shows Output]
 ```
-Project Structure
+## Project Structure: 
 
 ```
 📁 AzureAIValidation/
@@ -105,7 +79,8 @@ Project Structure
 └── README.md
 ```
 
-🧪 Quick Start
+## 🧪 Quick Start: 
+
 ▶️ Run Streamlit App
 ```streamlit run app_streamlit_async.py ```
 
@@ -116,9 +91,9 @@ func start
 ▶️ Tune thresholds
 ```python tune_thresholds.py ```
 
-🎛️ Configuration
+## Configuration:
 
-Set your Azure keys in config.py:
+Set your Azure keys in .env:
 
 ```AZURE_DOCUMENT_KEY = "your-key"
 AZURE_DOCUMENT_ENDPOINT = "https://xxxx.cognitiveservices.azure.com/"
@@ -135,7 +110,7 @@ For Azure Functions:
   }
 }
 ```
-🧠 AI Post-Processing
+## 🧠 AI Post-Processing: 
 
 We apply:
 - Confidence thresholding
@@ -153,7 +128,8 @@ We apply:
 </details>
 ```
 
-🛠 Deployment Options
+## 🛠 Deployment Options: 
+
 ☁ Deploy Azure Function
 
 Run:
